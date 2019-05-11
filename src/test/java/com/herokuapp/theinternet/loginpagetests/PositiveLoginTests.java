@@ -1,24 +1,19 @@
 package com.herokuapp.theinternet.loginpagetests;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class PositiveLoginTests {
+import com.herokuapp.theinternet.base.BaseTest;
+
+public class PositiveLoginTests extends BaseTest {
 
 	@Test
 	public void logInTest() {
 		System.out.println("Starting logIn test");
-
-		// Create driver
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
 
 		// open main page
 		String url = "http://the-internet.herokuapp.com/";
@@ -55,7 +50,5 @@ public class PositiveLoginTests {
 				"actualSuccessMessage does not contain expectedSuccessMessage\nexpectedSuccessMessage: "
 						+ expectedSuccessMessage + "\nactualSuccessMessage: " + actualSuccessMessage);
 
-		// Close browser
-		driver.quit();
 	}
 }
