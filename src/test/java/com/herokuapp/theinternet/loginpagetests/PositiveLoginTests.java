@@ -7,9 +7,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.herokuapp.theinternet.base.BaseTest;
+import com.herokuapp.theinternet.base.TestUtilities;
 
-public class PositiveLoginTests extends BaseTest {
+public class PositiveLoginTests extends TestUtilities {
 
 	@Test
 	public void logInTest() {
@@ -26,7 +26,8 @@ public class PositiveLoginTests extends BaseTest {
 		// enter username and password
 		driver.findElement(By.id("username")).sendKeys("tomsmith");
 		driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
-
+		
+		sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 
 		// push log in button

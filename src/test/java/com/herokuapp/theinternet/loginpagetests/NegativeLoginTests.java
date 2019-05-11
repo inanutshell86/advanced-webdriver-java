@@ -5,9 +5,9 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.herokuapp.theinternet.base.BaseTest;
+import com.herokuapp.theinternet.base.TestUtilities;
 
-public class NegativeLoginTests extends BaseTest {
+public class NegativeLoginTests extends TestUtilities {
 
 	@Parameters({ "username", "password", "expectedMessage" })
 	@Test(priority = 1)
