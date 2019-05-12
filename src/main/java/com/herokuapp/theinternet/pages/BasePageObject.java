@@ -40,11 +40,11 @@ public class BasePageObject {
 		waitForVisibilityOf(locator, 5);
 		find(locator).sendKeys(text);
 	}
-	
+
 	/** Get URL of current page from browser */
-	protected String getPageUrl() {
+	public String getCurrentUrl() {
 		return driver.getCurrentUrl();
-	}	
+	}
 
 	/**
 	 * Wait for specific ExpectedCondition for the given amount of time in seconds

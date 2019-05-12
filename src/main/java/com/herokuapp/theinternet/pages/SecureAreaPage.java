@@ -5,9 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class SecureAreaPage extends BasePageObject {
-	
+
 	private String pageUrl = "http://the-internet.herokuapp.com/secure";
-	
+
 	private By logoutBtn = By.xpath("//a[@class='button secondary radius']");
 	private By msg = By.id("flash");
 
@@ -16,17 +16,17 @@ public class SecureAreaPage extends BasePageObject {
 	}
 
 	/** Get URL variable from PageObject */
-	protected String getPageUrl() {
+	public String getPageUrl() {
 		return pageUrl;
 	}
-	
+
 	/** Verification if logOutButton is visible on the page */
-	protected boolean isLogOutBtnVisible( ) {
+	public boolean isLogOutBtnVisible() {
 		return find(logoutBtn).isDisplayed();
 	}
-	
+
 	/** Return text from success message */
-	protected String getSuccessMessageText() {
+	public String getSuccessMessageText() {
 		return find(msg).getText();
 	}
 
